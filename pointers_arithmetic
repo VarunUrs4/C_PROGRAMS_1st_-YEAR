@@ -1,0 +1,29 @@
+/*Develop a C program to perform arithmetic operations
+(addition, subtraction, multiplication, division and remainder) on two integers using pointers.*/
+
+#include<stdio.h>
+#include<string.h>
+int sum(int *p,int *q);
+
+static int main()
+{
+   int a , b;
+   printf("Enter the two numbers : ");
+   scanf("%d %d",&a,&b);
+   sum(&a,&b);
+   return 0;
+}
+
+int sum(int *p,int *q)
+{
+   int sum, diff, mul, quo, rem;
+   sum=(*p+*q);
+   diff=(*p)-(*q);
+   mul=(*q)*(*p);
+   quo=(*p)/(*q);
+   rem=(*p)%(*q);
+   printf("\n*********** The various arithmetic operations are **********\n");
+   printf("\nAddition = %d\nSubtraction = %d\nMultiplication = %d ",sum,diff,mul);
+   printf("\nQuotient = %d\nRemainder = %d",quo,rem);
+}
+
